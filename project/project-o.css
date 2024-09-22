@@ -1,0 +1,54 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-outcome{
+    margin-top: 100px; 
+    margin-bottom: 50px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.search-outcome .input,.search-outcome .output{
+    margin: 20px 0;
+}
+
+.search-outcome h5{
+    font-size: 20pt;
+    margin: 5px 0;
+}
+
+.search-outcome p{
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+.search-outcome .input p{
+    border: 1px solid rgba(78,78,78, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.search-outcome .out-sentence{
+    display: flex;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.search-outcome h6{
+    line-height: 40px;
+    font-size: 50pt;
+    padding: 10px;
+    color: #d63030;
+}
+
+.search-outcome .output p{
+    padding: 10px;
+    line-height: 40px;
+    font-size: 20pt;
+}
