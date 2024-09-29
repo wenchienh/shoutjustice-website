@@ -13,7 +13,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .categories ul{
@@ -40,8 +39,7 @@ main{
 }
 
 .categories #articles-container{
-    height: 80vh;
-    
+    height:80vh;
 }
 
 .categories .articles{
@@ -53,10 +51,14 @@ main{
 
 .categories .articles div{
     width: 60vw;
+    height: 80px;
     margin-top: 20px;
     padding: 20px;
     border: 1px solid rgba(78,78,78,.3);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .categories .type a{
@@ -173,6 +175,7 @@ main{
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 8;
+        line-clamp: 8;
         overflow: hidden;
     }
 

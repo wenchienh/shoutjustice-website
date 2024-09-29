@@ -303,16 +303,17 @@ button:hover{
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-size: 15px;
-    white-space: nowrap;          /* 禁止换行 */
-    overflow: hidden;             /* 隐藏溢出文本 */
-    text-overflow: ellipsis;      /* 显示省略号 */
-    display: block;               /* 确保 h4 是块元素 */
+    white-space: nowrap;         
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    display: block;               
 }
 
 .trend p{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
     overflow: hidden;
     margin-bottom: 15px;
     font-size: 14px;
@@ -451,7 +452,13 @@ footer hr{
 
 /* rwd start */
 
-
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .banner {
+        width: 100%;
+        background-size: cover;
+        background-position: center center; /* 確保圖片垂直和水平居中 */
+    }
+}
 
 @media screen and (max-width:1366px){
     
@@ -459,6 +466,13 @@ footer hr{
     header h1{
         left: 50%;
         transform: translateX(-50%);
+        height: 70px;
+        top: 5px;
+    }
+
+    header {
+        height: 80px;
+
     }
 
     header label{
@@ -502,8 +516,8 @@ footer hr{
     /* header rwd end
     /* banner rwd start */
     .banner{
-        height: 40vh;
-        background-size: contain;
+        height: 30vh;
+        background-size: contain;        
     }
 
     /* banner rwd end */
