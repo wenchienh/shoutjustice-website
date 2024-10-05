@@ -27,26 +27,12 @@
         </ul>
         
     </header>
-
-
+    
+    
     
     <main class="typeweb">
         <section class="carticles">
             <section class="categories">
-                <div class="type">
-                    <ul>
-                        <li><a href="#" onclick="showSection('health')">健康</a></li>
-                        <li><a href="#" onclick="showSection('politics')">政治</a></li>
-                        <li><a href="#" onclick="showSection('commerce')">商業</a></li>
-                        <li><a href="#" onclick="showSection('taiwan')">台灣</a></li>
-                        <li><a href="#" onclick="showSection('eco')">經濟</a></li>
-                        <li><a href="#" onclick="showSection('ent')">娛樂</a></li>
-                        <li><a href="#" onclick="showSection('international')">國際</a></li>
-                        <li><a href="#" onclick="showSection('tech')">科技</a></li>
-                        <li><a href="#" onclick="showSection('pe')">體育</a></li>
-                    </ul>
-                </div>
-
                 <div class="select-container">
                     <select class="select-box" onchange="showSection(this.value)">
                         <option value="health">健康</option>
@@ -65,6 +51,19 @@
                 </div>
                 
                 <div id="articles-container">
+                    <div class="type">
+                        <ul>
+                            <li><a href="#" onclick="showSection('health')">健康</a></li>
+                            <li><a href="#" onclick="showSection('politics')">政治</a></li>
+                            <li><a href="#" onclick="showSection('commerce')">商業</a></li>
+                            <li><a href="#" onclick="showSection('taiwan')">台灣</a></li>
+                            <li><a href="#" onclick="showSection('eco')">經濟</a></li>
+                            <li><a href="#" onclick="showSection('ent')">娛樂</a></li>
+                            <li><a href="#" onclick="showSection('international')">國際</a></li>
+                            <li><a href="#" onclick="showSection('tech')">科技</a></li>
+                            <li><a href="#" onclick="showSection('pe')">體育</a></li>
+                        </ul>
+                    </div>
                     <div class="articles" id="articles">
                         <div class="articles-list">
                             <!-- Articles will be displayed here -->
