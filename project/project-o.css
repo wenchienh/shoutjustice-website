@@ -17,13 +17,14 @@ main{
     margin: 20px 0;
 }
 
-.search-outcome h5{
-    font-size: 20pt;
+.search-outcome h4{
+    font-size: 15pt;
     margin: 5px 0;
+    color: #4e4e4e;
 }
 
 .search-outcome p{
-    font-size: 15pt;
+    font-size: 12pt;
     font-weight: 400;
 }
 
@@ -50,5 +51,12 @@ main{
 .search-outcome .output p{
     padding: 10px;
     line-height: 40px;
-    font-size: 20pt;
+    font-size: 12pt;
+}
+
+.search-outcome .output .out-sentence h6{
+    padding: 5px 0px 0px 10px;
+    line-height: 40px;
+    font-size: 28pt;
+    color: #fbaf59;
 }

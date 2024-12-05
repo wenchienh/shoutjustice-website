@@ -2,7 +2,7 @@
 window.onload = function() {
     showSection('health');
 };
-//需放在最前面，確保網頁載入後就即刻顯示內容
+//需放在最前面，確保網頁載入後就馬上顯示內容
 
 var textarea = document.querySelector('textarea');
         
@@ -90,6 +90,7 @@ function showSection(category) {
     }
 }
 
+//在不同裝置打開會從0開始 可能會拔掉這個功能
 function ViewCount(counterId, articleId) {
     // 獲取當前的點擊次數，默認為 0
     let viewCount = parseInt(localStorage.getItem(articleId)) || 0;
@@ -117,14 +118,50 @@ function updatePage() {
 }
 
 
-function openNewWindow() {
-    window.open('outcome.html', '_blank'); 
+
+// homepage.html 輸入文字傳遞到API??  Id對應到html id='' 裡面的文字
+document.getElementById('submit').addEventListener('click', (event) => {
+    event.preventDefault(); // 避免刷新頁面
+
+    const inputText = document.getElementById('inputtext').value;
+
+    fetch('http://127.0.0.1:5000/predict', {  // Flask API 的 URL (不確定是不是這樣)
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: inputText }) // 傳遞用戶輸入的文字
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(`Error: ${data.error}`);
+        } else {
+            // 將結果存進 Local Storage
+            localStorage.setItem('predictionResult', data.result);
+
+            // 進到 outcome.html
+            window.location.href = 'outcome.html';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('出錯了，請稍後再試。');
+    });
+});
+
+// 在 outcome.html 顯示結果
+if (window.location.pathname.includes('outcome.html')) {
+    const result = localStorage.getItem('predictionResult'); // 從 Local Storage 讀取結果
+
+    if (result) {
+        document.getElementById('percentage-num').innerText = result; // 更新頁面文字
+    } else {
+        document.getElementById('percentage-num').innerText = '沒有可用的結果。';
+    }
 }
-//開新視窗
 
-
-
-
+    
 
 
 
